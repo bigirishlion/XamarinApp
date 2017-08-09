@@ -12,11 +12,11 @@
     </ContentPage.Padding>
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BindingContext="{x:Reference slider}">
             <Button Text="Next" Clicked="Button_Clicked" />
-            <Label BindingContext="{x:Reference slider}" Text="{Binding Value, StringFormat='Font Size {0:F}'}" />
+            <Label Text="{Binding Value, StringFormat='Font Size {0:N0}'}" />
             <Slider Maximum="50" Minimum="16" x:Name="slider" />
-            <Label x:Name="quote" BindingContext="{x:Reference slider}" FontSize="{Binding Value}" />
+            <Label x:Name="quote" FontSize="{Binding Value}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

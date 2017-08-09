@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new XamarinApp.QuotesPage();
+            MainPage = new StackLayout2();
         }
 
         protected override void OnStart()

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.StackLayout2">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                <Label Text="test_username"  />
+            </StackLayout>
+            <Image Source="http://lorempixel.com/1920/1080/nature/3/" />
+            <StackLayout Spacing="20" Padding="10, 0" Orientation="Horizontal">
+                <Button Text="Like" />
+                <Button Text="Comment" />
+                <Button Text="Share" />
+            </StackLayout>
+            <StackLayout Padding="10">
+                <BoxView Color="#f0f0f0" HeightRequest="1" />
+                <Label Text="700 Like"  FontAttributes="Bold" />
+                <Label  Text="Note that the image is filling the entire page horizontally, but we have some padding around other elements. To implement this, you can have a parent StackLayout that fills the page horizontally, and a nested StackLayout with some padding." />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
