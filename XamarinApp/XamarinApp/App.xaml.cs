@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new GridLayout2();
+            MainPage = new AbsoluteLayout2();
         }
 
         protected override void OnStart()
