@@ -70,6 +70,9 @@
     <Compile Include="RelativeLayout1.xaml.cs">
       <DependentUpon>RelativeLayout1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RoundedImage.xaml.cs">
+      <DependentUpon>RoundedImage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StackLayout1.xaml.cs">
       <DependentUpon>StackLayout1.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\portable-net45+wp80+win8+wpa81\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -166,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PlatformSpecificImages.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RoundedImage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

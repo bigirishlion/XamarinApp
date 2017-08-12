@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new PlatformSpecificImages();
+            MainPage = new RoundedImage();
         }
 
         protected override void OnStart()
