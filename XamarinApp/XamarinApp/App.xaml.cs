@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new EmbeddedImage();
+            MainPage = new PlatformSpecificImages();
         }
 
         protected override void OnStart()
