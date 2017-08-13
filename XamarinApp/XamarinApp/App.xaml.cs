@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new RoundedImage();
+            MainPage = new PhotoGallery();
         }
 
         protected override void OnStart()

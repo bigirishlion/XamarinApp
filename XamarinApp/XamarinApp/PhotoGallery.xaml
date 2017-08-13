@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="Black" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.PhotoGallery">
+    <AbsoluteLayout>
+        <Image x:Name="image" Aspect="AspectFit" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"></Image>
+        <Button x:Name="prevBtn" AbsoluteLayout.LayoutBounds="0.05,0.05,50,50" AbsoluteLayout.LayoutFlags="PositionProportional" Image="left.png" BackgroundColor="Transparent"
+                Clicked="prevBtn_Clicked"></Button>
+        <ActivityIndicator IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}" AbsoluteLayout.LayoutBounds="0.5,0.05,50,50" AbsoluteLayout.LayoutFlags="PositionProportional"
+                Color="White" />
+        <Button x:Name="nextBtn" AbsoluteLayout.LayoutBounds="0.95, 0.05, 50, 50" AbsoluteLayout.LayoutFlags="PositionProportional" Image="right.png" BackgroundColor="Transparent"
+                Clicked="nextBtn_Clicked"></Button>
+    </AbsoluteLayout>
+</ContentPage>
