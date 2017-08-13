@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XamarinApp.Pages.Navigation;
 
 namespace XamarinApp
 {
@@ -13,7 +14,11 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new ListViewExercise();
+            MainPage = new NavigationPage(new Modal1())
+            {
+                BarBackgroundColor = Color.Gray,
+                BarTextColor = Color.DarkBlue
+            };
         }
 
         protected override void OnStart()
