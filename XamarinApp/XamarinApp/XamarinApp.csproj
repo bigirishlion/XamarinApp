@@ -70,6 +70,9 @@
     <Compile Include="Models\ContactGroup.cs" />
     <Compile Include="Models\Search.cs" />
     <Compile Include="Models\SearchGroup.cs" />
+    <Compile Include="Pages\Navigation\MasterDetail.xaml.cs">
+      <DependentUpon>MasterDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Navigation\Modal2.xaml.cs">
       <DependentUpon>Modal2.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,12 @@
     </Compile>
     <Compile Include="Pages\Navigation\Modal1.xaml.cs">
       <DependentUpon>Modal1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Navigation\SimpleDetail1.xaml.cs">
+      <DependentUpon>SimpleDetail1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Navigation\SimpleMaster1.xaml.cs">
+      <DependentUpon>SimpleMaster1.xaml</DependentUpon>
     </Compile>
     <Compile Include="PhotoGallery.xaml.cs">
       <DependentUpon>PhotoGallery.xaml</DependentUpon>
@@ -246,6 +255,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Navigation\Modal2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\SimpleMaster1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\SimpleDetail1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\MasterDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

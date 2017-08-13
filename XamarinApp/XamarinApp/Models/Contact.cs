@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XamarinApp.Models
 {
-    class Contact
+    public class Contact
     {
         public string Name { get; set; }
         public string Status { get; set; }

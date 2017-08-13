@@ -14,11 +14,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Modal1())
-            {
-                BarBackgroundColor = Color.Gray,
-                BarTextColor = Color.DarkBlue
-            };
+            MainPage = new MasterDetail();
         }
 
         protected override void OnStart()
