@@ -56,10 +56,20 @@
     <Compile Include="Images.xaml.cs">
       <DependentUpon>Images.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lists.xaml.cs">
+      <DependentUpon>Lists.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewExercise.xaml.cs">
+      <DependentUpon>ListViewExercise.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\ContactGroup.cs" />
+    <Compile Include="Models\Search.cs" />
+    <Compile Include="Models\SearchGroup.cs" />
     <Compile Include="PhotoGallery.xaml.cs">
       <DependentUpon>PhotoGallery.xaml</DependentUpon>
     </Compile>
@@ -76,6 +86,7 @@
     <Compile Include="RoundedImage.xaml.cs">
       <DependentUpon>RoundedImage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\SearchService.cs" />
     <Compile Include="StackLayout1.xaml.cs">
       <DependentUpon>StackLayout1.xaml</DependentUpon>
     </Compile>
@@ -187,6 +198,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="PhotoGallery.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Lists.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ListViewExercise.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

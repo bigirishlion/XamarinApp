@@ -13,7 +13,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new PhotoGallery();
+            MainPage = new ListViewExercise();
         }
 
         protected override void OnStart()

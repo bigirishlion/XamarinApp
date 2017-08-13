@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.ListViewExercise">
+    <StackLayout>
+        <SearchBar x:Name="search" Placeholder="Search..." TextChanged="SearchBar_TextChanged" />
+        <ListView x:Name="listView"
+            IsPullToRefreshEnabled="True"  Refreshing="ListView_Refreshing"
+            IsGroupingEnabled="True" GroupDisplayBinding="{Binding Title}"
+            HasUnevenRows="True"
+            ItemSelected="listView_ItemSelected"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20,5">
+                            <Label Text="{Binding Location}" TextColor="Blue" />
+                            <Label Text="{Binding Period} " />
+                        </StackLayout>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Delete" Clicked="Delete_Clicked" CommandParameter="{Binding .}" IsDestructive="True" />
+                        </ViewCell.ContextActions>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
