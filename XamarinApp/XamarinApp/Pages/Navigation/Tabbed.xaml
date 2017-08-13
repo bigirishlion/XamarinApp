@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.Navigation.Tabbed"
+            xmlns:local="clr-namespace:XamarinApp.Pages.Navigation">
+    <local:Tabbed1 Title="Contacts" BackgroundColor="Green" />
+    <NavigationPage Title="Page 1" BackgroundColor="Red">
+        <x:Arguments>
+            <local:Tabbed1 Title="Contacts" Icon="clock.png" />
+        </x:Arguments>
+    </NavigationPage>
+    <ContentPage Title="Page 2" BackgroundColor="Yellow">
+        <Label Text="Content of Page2" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+</TabbedPage>
