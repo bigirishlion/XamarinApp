@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Padding="40" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.FormsAndSettings.Switch">
+    <StackLayout>
+        <Switch IsToggled="True" x:Name="switch" HorizontalOptions="Start" />
+        <Label Text="Content" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled }" />
+    </StackLayout>
+</ContentPage>

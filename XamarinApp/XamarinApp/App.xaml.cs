@@ -5,6 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 using XamarinApp.Pages.Navigation;
+using XamarinApp.Pages.FormsAndSettings;
 
 namespace XamarinApp
 {
@@ -14,7 +15,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new NavigationExercise() );
+            MainPage = new XamarinApp.Pages.FormsAndSettings.DateTimePicker();
         }
 
         protected override void OnStart()
