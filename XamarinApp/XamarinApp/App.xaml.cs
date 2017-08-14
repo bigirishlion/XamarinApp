@@ -14,7 +14,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new Tabbed();
+            MainPage = new NavigationPage( new NavigationExercise() );
         }
 
         protected override void OnStart()

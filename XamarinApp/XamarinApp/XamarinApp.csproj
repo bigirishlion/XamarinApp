@@ -66,10 +66,12 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactGroup.cs" />
     <Compile Include="Models\Search.cs" />
     <Compile Include="Models\SearchGroup.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Pages\Navigation\Carousel.xaml.cs">
       <DependentUpon>Carousel.xaml</DependentUpon>
     </Compile>
@@ -87,6 +89,15 @@
     </Compile>
     <Compile Include="Pages\Navigation\Modal1.xaml.cs">
       <DependentUpon>Modal1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Navigation\NavigationExercise.xaml.cs">
+      <DependentUpon>NavigationExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Navigation\NavigationExerciseDetail.xaml.cs">
+      <DependentUpon>NavigationExerciseDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Navigation\NavigationExerciseList.xaml.cs">
+      <DependentUpon>NavigationExerciseList.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Navigation\SimpleDetail1.xaml.cs">
       <DependentUpon>SimpleDetail1.xaml</DependentUpon>
@@ -106,6 +117,9 @@
     <Compile Include="PlatformSpecificImages.xaml.cs">
       <DependentUpon>PlatformSpecificImages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Popups.xaml.cs">
+      <DependentUpon>Popups.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuotesPage.xaml.cs">
       <DependentUpon>QuotesPage.xaml</DependentUpon>
@@ -116,12 +130,17 @@
     <Compile Include="RoundedImage.xaml.cs">
       <DependentUpon>RoundedImage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\ActivityService.cs" />
     <Compile Include="Services\SearchService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="StackLayout1.xaml.cs">
       <DependentUpon>StackLayout1.xaml</DependentUpon>
     </Compile>
     <Compile Include="StackLayout2.xaml.cs">
       <DependentUpon>StackLayout2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Toolbar.xaml.cs">
+      <DependentUpon>Toolbar.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +319,36 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Navigation\Carousel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Popups.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Toolbar.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\NavigationExercise.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\NavigationExerciseDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Navigation\NavigationExerciseList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
