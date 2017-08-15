@@ -47,6 +47,9 @@
     <Compile Include="EmbeddedImage.xaml.cs">
       <DependentUpon>EmbeddedImage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\DateCell.xaml.cs">
+      <DependentUpon>DateCell.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GridLayout1.xaml.cs">
       <DependentUpon>GridLayout1.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
     <Compile Include="Pages\FormsAndSettings\Picker.xaml.cs">
       <DependentUpon>Picker.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FormsAndSettings\PickerNavigationList.xaml.cs">
+      <DependentUpon>PickerNavigationList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\FormsAndSettings\Slider.xaml.cs">
       <DependentUpon>Slider.xaml</DependentUpon>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Pages\FormsAndSettings\Switch.xaml.cs">
       <DependentUpon>Switch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FormsAndSettings\TableView.xaml.cs">
+      <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Navigation\Carousel.xaml.cs">
       <DependentUpon>Carousel.xaml</DependentUpon>
@@ -403,6 +412,24 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\FormsAndSettings\DateTimePicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FormsAndSettings\TableView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Extensions\DateCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FormsAndSettings\PickerNavigationList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

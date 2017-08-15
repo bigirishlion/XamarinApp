@@ -15,7 +15,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new XamarinApp.Pages.FormsAndSettings.DateTimePicker();
+            MainPage = new NavigationPage( new Pages.FormsAndSettings.TableView());
         }
 
         protected override void OnStart()
