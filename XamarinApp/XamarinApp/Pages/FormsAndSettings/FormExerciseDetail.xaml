@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp.Extensions"
+             x:Class="XamarinApp.Pages.FormsAndSettings.FormExerciseDetail">
+    <TableView>
+        <TableRoot>
+            <TableSection Title="Name">
+                <!-- TODO Figure this out!
+                <local:BasicEntryCell Value="{Binding Name}" Label="First Name" />-->
+                <!--<ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13,0">
+                        <Label Text="First Name" VerticalOptions="Center" />
+                        <Entry x:Name="FirstName" Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13,0">
+                        <Label Text="Last Name" VerticalOptions="Center" />
+                        <Entry x:Name="LastName" Text="{Binding LastName}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ViewCell>-->
+                <EntryCell Label="First Name" Text="{Binding Name}" />
+                <EntryCell Label="First Name" Text="{Binding LastName}" />
+            </TableSection>
+            <TableSection Title="Contact">
+                <EntryCell Label="Phone" Text="{Binding Phone}" Keyboard="Numeric" />
+                <EntryCell Label="Email" Text="{Binding Email}" Keyboard="Email" />
+            </TableSection>
+            <TableSection Title="Other">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13,0">
+                        <Label Text="Blocked" VerticalOptions="Center" />
+                        <Switch IsToggled="{Binding Blocked}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Other">
+                <ViewCell>
+                    <StackLayout Padding="13,0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Button Text="Save" Clicked="Button_Clicked"  />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

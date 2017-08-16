@@ -15,7 +15,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new Pages.FormsAndSettings.TableView());
+            MainPage = new NavigationPage( new Pages.FormsAndSettings.FormsExercise());
         }
 
         protected override void OnStart()
