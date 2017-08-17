@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new XamarinApp.Pages.DataAccess.RestApi();
+            MainPage = new NavigationPage( new XamarinApp.Pages.DataAccess.DataAccessExerciseContactBook() );
         }
 
         protected override void OnStart()

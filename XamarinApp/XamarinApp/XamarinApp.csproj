@@ -84,6 +84,12 @@
     <Compile Include="Pages\DataAccess\ApplicationPropertiesGlobal.xaml.cs">
       <DependentUpon>ApplicationPropertiesGlobal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DataAccess\DataAccessExerciseContactBook.xaml.cs">
+      <DependentUpon>DataAccessExerciseContactBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DataAccess\DataAccessExerciseContactBookDetail.xaml.cs">
+      <DependentUpon>DataAccessExerciseContactBookDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DataAccess\RestApi.xaml.cs">
       <DependentUpon>RestApi.xaml</DependentUpon>
     </Compile>
@@ -522,6 +528,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\DataAccess\RestApi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseContactBook.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseContactBookDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

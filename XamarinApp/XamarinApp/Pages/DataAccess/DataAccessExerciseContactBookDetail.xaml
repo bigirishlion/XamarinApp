@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.DataAccess.DataAccessExerciseContactBookDetail">
+    <TableView>
+        <TableRoot>
+            <TableSection Title="Name">
+                <EntryCell Label="First Name" Text="{Binding Name}" />
+                <EntryCell Label="Last Name" Text="{Binding LastName}" />
+            </TableSection>
+            <TableSection Title="Contact">
+                <EntryCell Label="Phone" Text="{Binding Phone}" Keyboard="Numeric" />
+                <EntryCell Label="Email" Text="{Binding Email}" Keyboard="Email" />
+            </TableSection>
+            <TableSection Title="Other">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="13,0">
+                        <Label Text="Blocked" VerticalOptions="Center" />
+                        <Switch IsToggled="{Binding Blocked}" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            <TableSection Title="Other">
+                <ViewCell>
+                    <StackLayout Padding="13,0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Button Text="Save" Clicked="Button_Clicked"  />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
