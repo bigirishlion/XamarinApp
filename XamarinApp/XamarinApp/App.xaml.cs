@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new XamarinApp.Pages.DataAccess.SqliteDb();
+            MainPage = new XamarinApp.Pages.DataAccess.RestApi();
         }
 
         protected override void OnStart()
