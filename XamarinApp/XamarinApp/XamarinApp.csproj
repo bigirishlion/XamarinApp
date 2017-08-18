@@ -75,6 +75,7 @@
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactGroup.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\Search.cs" />
     <Compile Include="Models\SearchGroup.cs" />
     <Compile Include="Models\User.cs" />
@@ -89,6 +90,12 @@
     </Compile>
     <Compile Include="Pages\DataAccess\DataAccessExerciseContactBookDetail.xaml.cs">
       <DependentUpon>DataAccessExerciseContactBookDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DataAccess\DataAccessExerciseNetflixRoulette.xaml.cs">
+      <DependentUpon>DataAccessExerciseNetflixRoulette.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DataAccess\DataAccessExerciseNetflixRouletteDetail.xaml.cs">
+      <DependentUpon>DataAccessExerciseNetflixRouletteDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\DataAccess\RestApi.xaml.cs">
       <DependentUpon>RestApi.xaml</DependentUpon>
@@ -187,6 +194,7 @@
     </Compile>
     <Compile Include="Services\ActivityService.cs" />
     <Compile Include="Services\ContactService.cs" />
+    <Compile Include="Services\MovieService.cs" />
     <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="StackLayout1.xaml.cs">
@@ -540,6 +548,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseContactBookDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseNetflixRoulette.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseNetflixRouletteDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

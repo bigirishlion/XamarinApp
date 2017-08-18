@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="{Binding ShowTitle}" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.DataAccess.DataAccessExerciseNetflixRouletteDetail">
+    <RelativeLayout>
+        <Image  x:Name="poster" Aspect="AspectFill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression 
+				Type=RelativeToParent,
+				Property=Height,
+				Factor=0.5}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}" Source="{Binding Poster}" />
+        <StackLayout Padding="10" RelativeLayout.WidthConstraint="{ConstraintExpression
+				Type=RelativeToParent,
+				Property=Width,
+				Factor=1}"
+				
+			RelativeLayout.YConstraint="{ConstraintExpression
+				Type=RelativeToView,
+				ElementName=poster,
+				Property=Height,
+				Factor=1,
+				Constant=30}">
+            <Label Text="{Binding ShowTitle}" FontSize="30" />
+            <Label Text="{Binding ReleaseYear}" FontSize="15" TextColor="Gray" />
+            <Label Text="{Binding Summary}" />
+        </StackLayout>
+    </RelativeLayout>
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Image Source="{Binding Poster}" />
+            <Label Text="{Binding ShowTitle}" FontSize="30" />
+            <Label Text="{Binding ReleaseYear}" FontSize="15" TextColor="Gray" />
+            <Label Text="{Binding Summary}" />
+        </StackLayout>
+    </ContentPage.Content>-->
+</ContentPage>

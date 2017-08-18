@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Movies" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Pages.DataAccess.DataAccessExerciseNetflixRoulette">
+    <StackLayout>
+        <SearchBar Placeholder="Search by actor..." TextChanged="SearchBar_TextChanged" />
+        <Frame HasShadow="True" IsVisible="False" x:Name="resultsLabel">
+            <Label Text="No movies found matching your result" HorizontalOptions="Center" />
+        </Frame>
+        <!--<ActivityIndicator IsRunning="{Binding Source={x:Reference listView}, Path=IsRefreshing}" />-->
+        <ListView x:Name="listView" ItemSelected="listView_ItemSelected" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Image Source="{Binding Poster}" HeightRequest="40" />
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding ShowTitle}" />
+                                <Label Text="{Binding ReleaseYear}" TextColor="Blue" FontSize="10" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new XamarinApp.Pages.DataAccess.DataAccessExerciseContactBook() );
+            MainPage = new NavigationPage( new XamarinApp.Pages.DataAccess.DataAccessExerciseNetflixRoulette() );
         }
 
         protected override void OnStart()
