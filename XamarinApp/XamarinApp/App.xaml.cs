@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new XamarinApp.Pages.DataAccess.DataAccessExerciseNetflixRoulette() );
+            MainPage = new NavigationPage( new XamarinApp.Pages.MVVM.MVVMExercise() );
         }
 
         protected override void OnStart()

@@ -133,6 +133,21 @@
     <Compile Include="Pages\FormsAndSettings\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MVVM\Models\Contact.cs" />
+    <Compile Include="Pages\MVVM\MVVMExercise.xaml.cs">
+      <DependentUpon>MVVMExercise.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MVVM\MVVMExerciseDetail.xaml.cs">
+      <DependentUpon>MVVMExerciseDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MVVM\Persistence\SQLiteContactStore.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\BaseViewModel.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\ContactDetailViewModel.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\ContactsPageViewModel.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\ContactViewModel.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\IContactStore.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\IPageService.cs" />
+    <Compile Include="Pages\MVVM\ViewModels\PageService.cs" />
     <Compile Include="Pages\Navigation\Carousel.xaml.cs">
       <DependentUpon>Carousel.xaml</DependentUpon>
     </Compile>
@@ -560,6 +575,19 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\DataAccess\DataAccessExerciseNetflixRouletteDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MVVM\MVVMExercise.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MVVM\MVVMExerciseDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
