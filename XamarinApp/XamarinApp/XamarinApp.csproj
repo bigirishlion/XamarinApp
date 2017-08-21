@@ -204,6 +204,9 @@
     <Compile Include="RelativeLayout1.xaml.cs">
       <DependentUpon>RelativeLayout1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ResourceDictionary.xaml.cs">
+      <DependentUpon>ResourceDictionary.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RoundedImage.xaml.cs">
       <DependentUpon>RoundedImage.xaml</DependentUpon>
     </Compile>
@@ -579,7 +582,12 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceDictionary.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\MVVM\MVVMExercise.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

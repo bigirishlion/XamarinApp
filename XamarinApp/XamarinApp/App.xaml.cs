@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage( new XamarinApp.Pages.MVVM.MVVMExercise() );
+            MainPage = new ResourceDictionary();
         }
 
         protected override void OnStart()
