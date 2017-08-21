@@ -19,7 +19,7 @@ namespace XamarinApp
         {
             InitializeComponent();
 
-            MainPage = new ResourceDictionary();
+            MainPage = new StyleExercise();
         }
 
         protected override void OnStart()
