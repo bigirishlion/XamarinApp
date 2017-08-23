@@ -133,6 +133,7 @@
     <Compile Include="Pages\FormsAndSettings\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MVVM\Events.cs" />
     <Compile Include="Pages\MVVM\Models\Contact.cs" />
     <Compile Include="Pages\MVVM\MVVMExercise.xaml.cs">
       <DependentUpon>MVVMExercise.xaml</DependentUpon>

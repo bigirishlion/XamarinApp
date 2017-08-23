@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using XamarinApp.Pages.MVVM.Models;
 
 namespace XamarinApp.Pages.MVVM.ViewModels
 {
@@ -48,6 +49,32 @@ namespace XamarinApp.Pages.MVVM.ViewModels
             AddContactCommand = new Command(async () => await AddContact());
             SelectContactCommand = new Command<ContactViewModel>(async c => await SelectContact(c));
             DeleteContactCommand = new Command<ContactViewModel>(async c => await DeleteContact(c));
+
+            // Subscribe to events 
+            MessagingCenter.Subscribe<ContactDetailViewModel, Contact>
+                (this, Events.ContactAdded, OnContactAdded);
+
+            MessagingCenter.Subscribe<ContactDetailViewModel, Contact>
+            (this, Events.ContactUpdated, OnContactUpdated);
+        }
+
+        private void OnContactAdded(ContactDetailViewModel source, Contact contact)
+        {
+            Contacts.Add(new ContactViewModel(contact));
+        }
+
+        private void OnContactUpdated(ContactDetailViewModel source, Contact contact)
+        {
+            // Here we need to find the corresponding Contact object in our 
+            // ObservableCollection first. 
+            var contactInList = Contacts.Single(c => c.Id == contact.Id);
+
+            contactInList.Id = contact.Id;
+            contactInList.FirstName = contact.FirstName;
+            contactInList.LastName = contact.LastName;
+            contactInList.Phone = contact.Phone;
+            contactInList.Email = contact.Email;
+            contactInList.IsBlocked = contact.IsBlocked;
         }
 
         private async Task LoadData()
@@ -69,14 +96,7 @@ namespace XamarinApp.Pages.MVVM.ViewModels
 
         private async Task AddContact()
         {
-            var viewModel = new ContactDetailViewModel(new ContactViewModel(), _contactStore, _pageService);
-
-            viewModel.ContactAdded += (source, contact) =>
-            {
-                Contacts.Add(new ContactViewModel(contact));
-            };
-
-            await _pageService.PushAsync(new MVVMExerciseDetail(viewModel));
+            await _pageService.PushAsync(new MVVMExerciseDetail(new ContactViewModel()));
         }
 
         private async Task SelectContact(ContactViewModel contact)
@@ -86,18 +106,7 @@ namespace XamarinApp.Pages.MVVM.ViewModels
 
             SelectedContact = null;
 
-            var viewModel = new ContactDetailViewModel(contact, _contactStore, _pageService);
-            viewModel.ContactUpdated += (source, updatedContact) =>
-            {
-                contact.Id = updatedContact.Id;
-                contact.FirstName = updatedContact.FirstName;
-                contact.LastName = updatedContact.LastName;
-                contact.Phone = updatedContact.Phone;
-                contact.Email = updatedContact.Email;
-                contact.IsBlocked = updatedContact.IsBlocked;
-            };
-
-            await _pageService.PushAsync(new MVVMExerciseDetail(viewModel));
+            await _pageService.PushAsync(new MVVMExerciseDetail(contact));
         }
 
         private async Task DeleteContact(ContactViewModel contactViewModel)
